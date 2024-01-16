@@ -1,0 +1,25 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+
+    .titleContainer{
+        font-size: $txt-rsp-5;
+        @include cinzel;
+        line-height: 1.2;
+
+        div{
+            overflow: hidden;
+        }
+
+        .line2{
+            padding-left: $spacing-l-4;
+        }
+
+        .line3{
+            padding-left: $spacing-l-7;
+        }
+    }
+}

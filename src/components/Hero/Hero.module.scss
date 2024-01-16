@@ -1,0 +1,98 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: 100vw;
+    background-color: $bg-main;
+    @include contentPadding;
+
+    .content{
+        @include content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-inline: $spacing-l-2;
+    }
+}
+
+.maskContainer{
+    margin-right: -1px;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 105%;
+    height: 100%;
+    background-color: $bg-sec;
+    color: $txt-sec;
+    z-index: 2;
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+
+    .titleContainer{
+        position: absolute;
+        top: 60%;
+        right: 5%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: $txt-sm-2;
+    
+    .col{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm-1;
+        flex: 1;
+        opacity: 0;
+        
+        .first{
+            display: flex;
+        }
+
+        .heading{
+            margin-left: $spacing-l-5;
+        }
+    }
+
+    .scrollContainer{
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm-2;
+        opacity: 0;
+
+        p{
+            font-weight: 600;
+        }
+
+        .icon{
+            font-size: $txt-l-1;
+            animation: anim 3s ease-in-out infinite;;
+        }
+    }
+}
+
+@keyframes anim{
+    0% {
+        opacity: .5;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(25px);
+    }
+    75% {
+        transform: translateX(0);
+    }
+    100% {
+        opacity: .5;
+        transform: translateX(0);
+    }
+}

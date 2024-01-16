@@ -1,0 +1,98 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: 100vw;
+    background-color: $bg-sec;
+    color: $txt-sec;
+    z-index: 2;
+    margin-right: -1px;
+    margin-left: -1px;
+
+    .content{
+        @include content;
+        @include centerFlex;
+
+        .titleContainer{
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            
+            h2{
+                font-size: $txt-rsp-5;
+                @include cinzel;
+                text-transform: uppercase;
+            }
+
+            .line1{
+                display: flex;
+                justify-content: center;
+            }
+
+            .line2{
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .line3{
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .imgContainers{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: fit-content;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+
+            &:nth-of-type(1){
+                align-items: center;
+            }
+            &:nth-of-type(2){
+                align-items: flex-start;
+            }
+            &:nth-of-type(3){
+                align-items: flex-end;
+            }
+
+            img{
+                @include img;
+            }
+
+            .textContainer{
+                max-width: 250px;
+                margin-top: $spacing-sm-2;
+
+                span{
+                    margin-right: $spacing-l-2;
+                }
+            }
+
+            .imgContainer1{
+                width: 480px;
+                height: 250px;
+            }
+
+            .imgContainer2{
+                width: 350px;
+                height: 270px;
+                margin-top: $spacing-l-4;
+            }
+
+            .imgContainer3{
+                width: 400px;
+                height: 300px;
+                margin-top: -$spacing-l-5;
+            }
+        }
+    }
+}

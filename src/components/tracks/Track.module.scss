@@ -1,0 +1,8 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.track{
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+}

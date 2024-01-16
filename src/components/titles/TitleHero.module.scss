@@ -1,0 +1,56 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.wrapper{
+
+    .titleContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+
+        .line{
+            position: relative;
+            display: inline-block;
+            line-height: 1.1;
+            opacity: 0;
+            
+            h2{
+                @include cinzel;
+                text-transform: uppercase;
+                overflow: hidden;
+            }
+            
+            .title1{
+                font-size: $txt-rsp-5;
+            }
+
+            .title2{
+                font-size: $txt-rsp-6;
+            }
+
+            .title3{
+                font-size: $txt-rsp-6;
+            }
+
+            p{
+                position: absolute;
+                bottom: 20%;
+                transform: translateY(-50%);
+                font-size: $txt-nm-1;
+                text-transform: uppercase;
+                display: flex;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            .decor1{
+                right: 100%;
+            }
+
+            .decor2{
+                left: 101%;
+            }
+        }
+    }
+}

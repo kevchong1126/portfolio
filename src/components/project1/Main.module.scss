@@ -1,0 +1,104 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: 100vw;
+    background-color: $bg-sec;
+    @include contentPadding;
+    padding-bottom: $spacing-nm-1;
+    margin-right: -1px;
+    z-index: 1;
+    
+    .content{
+        @include content;
+        width: 80%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm-2;
+    align-items: flex-end;
+    height: 50%;
+
+    .imgContainer{
+        position: relative;
+        width: 60%;
+        height: 100%;
+        clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay{
+            @include fullAbsolute;
+            background-color: rgba($color: $black, $alpha: 0.2);
+            z-index: 2;
+        }
+    }
+
+    .nameContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        letter-spacing: 1px;
+        opacity: 0;
+        @include quint;
+
+        .desc{
+            text-transform: uppercase;
+        }
+    }
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    gap: $spacing-l-4;
+
+    .col{
+        opacity: 0;
+        
+        .heading{
+            font-size: $txt-nm-1;
+            margin-bottom: $spacing-nm-4;
+            font-weight: lighter;
+            text-transform: uppercase;
+        }
+
+        .par{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .btnContainer{
+            display: inline-block;
+
+            .btn{
+                display: flex;
+                align-items: center;
+                gap: $spacing-sm-2;
+                color: $txt-sec;
+                font-size: $txt-nm-1;
+                padding-bottom: $spacing-sm-1;
+                margin-bottom: $spacing-sm-1;
+
+                .icon{
+                    font-size: $txt-nm-3;
+                }
+            }
+        }
+    }
+
+}
+

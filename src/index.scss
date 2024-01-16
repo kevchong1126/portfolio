@@ -1,0 +1,36 @@
+@use './scss/mixins' as *;
+@use './scss/variables' as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    color: $txt-main;
+    overflow-x: hidden;
+    font-size: $txt-sm-4;
+    @include montserrat;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: $txt-main;
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}

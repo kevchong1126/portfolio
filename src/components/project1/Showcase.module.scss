@@ -1,0 +1,82 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: fit-content;
+    display: flex;
+    margin-right: -1px;
+    
+    .section{
+        height: 100%;
+        width: 100vw;
+        position: relative;
+        margin-right: -1px;
+        background-color: $bg-sec;
+
+        .parallax{
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+        }
+
+    }
+
+    .cards{
+        display: flex;
+        gap: $spacing-l-7;
+        width: fit-content;
+        height: 100%;
+        padding-top: $spacing-sm-4;
+        color: $txt-sec;
+        background-color: $bg-sec;
+        padding-left: $spacing-l-5;
+        padding-right: 25vw;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 690px;
+            height: 100%;
+            font-size: $txt-rsp-4;
+            opacity: 0;
+            @include cinzel;
+
+            .top{
+                margin-bottom: $spacing-sm-4;
+            }
+
+            .imgContainer{
+                width: 300px;
+                height: 280px;
+                margin-bottom: $spacing-nm-1;
+                overflow: hidden;
+                
+                img{
+                    @include img;
+                }
+            }
+
+            .textContainer{
+                transform: translateX(-40%);
+                
+            }
+            .textContainer2{
+
+            }
+
+            .quicksand{
+                font-size: $txt-nm-2;
+                @include montserrat;
+            }
+
+            .bottomText{
+                transform: translateX(40%);
+            }
+        }
+    }
+}

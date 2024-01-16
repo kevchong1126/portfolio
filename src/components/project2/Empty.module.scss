@@ -1,0 +1,11 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.wrapper{
+    position: relative;
+    width: 150vw;
+    height: 100%;
+    background-color: $bg-sec;
+    color: $white;
+    margin-right: -1px;
+}

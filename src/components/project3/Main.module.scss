@@ -1,0 +1,61 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: 100vw;
+    background-color: $bg-sec;
+    color: $white;
+    @include contentPadding;
+    padding-inline: $spacing-l-2;
+    margin-right: -1px;
+    
+    .maskContainer{
+        @include fullAbsolute;
+        background-color: $gray;
+        color: $black;
+        z-index: 2;
+        clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+
+        .right{
+            position: absolute;
+            top: 60%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+    }
+    .content{
+        @include content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .titleContainer{
+            @include cinzel;
+
+            .title{
+                font-size: $txt-rsp-5;
+                font-weight: 300;
+            }
+        }
+
+        .flex{
+            display: flex;
+            gap: $spacing-l-4;
+
+            .col{
+                max-width: 250px;
+
+                span{
+                    margin-right: $spacing-l-4;
+                }
+
+                a{
+                    color: $white;
+                    display: flex;
+                    margin-top: $spacing-sm-2;
+                }
+            }
+        }
+    }
+}

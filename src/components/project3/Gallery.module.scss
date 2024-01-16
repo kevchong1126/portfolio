@@ -1,0 +1,112 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+
+.container{
+    @include container;
+    width: fit-content;
+    background-color: $bg-main;
+    color: $txt-main;
+    @include contentPadding;
+    padding-inline: $spacing-l-7;
+
+    .content{
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 25rem;
+    }
+}
+
+.titleContainer{
+    white-space: nowrap;
+    @include cinzel;
+
+    .line{
+        display: flex;
+        align-items: flex-end;
+
+        span{
+            font-size: $txt-nm-4;
+        }
+    }
+
+    h2{
+        font-size: $txt-rsp-4;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+
+.slider{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    gap: $spacing-l-2;
+
+    .cardS{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .imgContainer{
+            width: 350px;
+            height: 450px;
+            overflow: hidden;
+
+            img{
+                @include img;
+                transform: scale(1.15);
+            }
+        }
+
+        .textContainer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: $spacing-sm-1;
+            overflow: hidden;
+
+            .number{
+                @include cinzel;
+                font-size: $txt-l-1;
+            }
+
+            .desc{
+                text-align: right;
+                @include cinzel;
+            }
+        }
+    }
+
+    .cardL{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .imgContainer{
+            width: 650px;
+            height: 450px;
+            overflow: hidden;
+
+            img{
+                @include img;
+                transform: scale(1.15);
+            }
+        }
+
+        .textContainer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: $spacing-sm-1;
+
+            .number{
+                @include cinzel;
+                font-size: $txt-l-1;
+            }
+
+            .desc{
+                text-align: right;
+                @include cinzel;
+            }
+        }
+    }
+}
