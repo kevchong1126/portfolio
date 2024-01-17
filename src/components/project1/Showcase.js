@@ -21,7 +21,7 @@ const Showcase = () => {
             <div className={styles.card} ref={p1ShowCol}>
                 <p className={styles.top}>Amazing</p>
                 <div className={styles.imgContainer} ref={p1ShowImg}>
-                    
+                    <img src={img1} className={styles.disappear}></img>
                 </div>
                 <div className={styles.textContainer}>
                     <span className={styles.cinzel}>Showcase</span>

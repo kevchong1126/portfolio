@@ -26,7 +26,7 @@ const Main = () => {
             <div className={styles.titleContainer}>
                 <h2 className={styles.title} ref={p3MainWord1}>Project 111</h2>
                 <h2 className={styles.title} ref={p3MainWord2}>Social Media</h2>
-                <h2 className={styles.title} ref={p3MainWord3}>"Instapic"</h2>
+                <h2 className={styles.title} ref={p3MainWord3}> "Instapic"</h2>
             </div>
 
             <div className={styles.flex}>
@@ -44,11 +44,11 @@ const Main = () => {
                     <span>3.</span>
                     Demo and Code:
 
-                    <a href='#' target='_blank' className={styles.btn}>
+                    <a href='https://kevchong1126.github.io/instapic/' target='_blank' className={styles.btn}>
                         <p>Live Demo </p>
                         <IoIosArrowRoundForward className={styles.icon}/>
                     </a>
-                    <a href='#' target='_blank' className={styles.btn}>
+                    <a href='https://github.com/kevchong1126/instapic' target='_blank' className={styles.btn}>
                         <p>Source code</p>
                         <IoIosArrowRoundForward className={styles.icon}/>
                     </a>

@@ -5,6 +5,7 @@ import styles from './Project3.module.scss'
 import FullImg from './FullImg'
 import Main from './Main'
 import Gallery from './Gallery'
+import Footer from '../Footer/Footer'
 
 const Project3 = () => {
   return (
@@ -12,6 +13,7 @@ const Project3 = () => {
         <FullImg />
         <Main />
         <Gallery />
+        <Footer />
     </div>
   )
 }

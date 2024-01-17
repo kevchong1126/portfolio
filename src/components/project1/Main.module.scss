@@ -1,5 +1,6 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
 
 .container{
     @include container;
@@ -10,6 +11,10 @@
     margin-right: -1px;
     z-index: 1;
     
+    @include custom-screen($b: 800px){
+        
+    }
+
     .content{
         @include content;
         width: 80%;
@@ -17,6 +22,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include xl-screen{
+            justify-content: center;
+            gap: $spacing-l-3;
+        }
     }
 }
 
@@ -32,6 +42,11 @@
         width: 60%;
         height: 100%;
         clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+
+        @include custom-screen($b: 800px){
+            width: 100%;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        }
 
         img{
             width: 100%;
@@ -54,6 +69,10 @@
         opacity: 0;
         @include quint;
 
+        @include custom-screen($b: 800px){
+            opacity: 1;
+        }
+
         .desc{
             text-transform: uppercase;
         }
@@ -65,20 +84,51 @@
     justify-content: center;
     gap: $spacing-l-4;
 
+    @include xl-screen{
+        gap: $spacing-l-1;
+    }
+    
+    @include custom-screen($b: 600px){
+        flex-direction: column;
+    }
+    
     .col{
         opacity: 0;
         
+        @include custom-screen($b: 800px){
+            opacity: 1;
+        }
+
         .heading{
             font-size: $txt-nm-1;
             margin-bottom: $spacing-nm-4;
             font-weight: lighter;
             text-transform: uppercase;
+
+            
+            @include xl-screen{
+                margin-bottom: $spacing-nm-1;
+                font-size: $txt-sm-3;
+            }
+
+            @include custom-screen($b: 800px){
+                margin-bottom: $spacing-sm-2;
+                font-size: $txt-sm-2;
+            }
         }
 
         .par{
             display: flex;
             flex-direction: column;
             gap: 3px;
+
+            @include xl-screen{
+                font-size: $txt-sm-2;
+            }
+
+            @include custom-screen($b: 800px){
+                font-size: $txt-sm-1;
+            }
         }
 
         .btnContainer{
@@ -92,6 +142,15 @@
                 font-size: $txt-nm-1;
                 padding-bottom: $spacing-sm-1;
                 margin-bottom: $spacing-sm-1;
+
+                @include xl-screen{
+                    font-size: $txt-sm-2;
+                }
+                
+                @include custom-screen($b: 800px){
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
 
                 .icon{
                     font-size: $txt-nm-3;

@@ -12,6 +12,7 @@ const Gallery = () => {
 
   return (
     <div className={styles.container}>
+
         <div className={styles.content}>
 
             <div className={styles.titleContainer}>

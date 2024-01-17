@@ -16,10 +16,10 @@ const Main = () => {
 
         <div className={styles.content}>
              <div className={styles.top}>
-                <div className={styles.imgContainer} ref={p1Img}>
+                <a href='https://kevchong1126.github.io/realestate/' target='_blank' className={styles.imgContainer} ref={p1Img}>
                   <img src={img1} />
                   <div className={styles.overlay}></div>
-                </div>
+                </a>
 
                 <div className={styles.nameContainer} ref={p1Name}>
                   <p className={styles.name}>"Ibiza Real Estate"</p>
@@ -67,7 +67,7 @@ const Main = () => {
                           <IoIosArrowRoundForward  className={styles.icon}/>
                         </a>
                         
-                        <a href='#' target='_blank' className={styles.btn}>
+                        <a href='https://github.com/kevchong1126/realestate' target='_blank' className={styles.btn}>
                           <p>Github Code</p>
                           <IoIosArrowRoundForward  className={styles.icon}/>
                         </a>

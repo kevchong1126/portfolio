@@ -1,9 +1,9 @@
 $sizes : (
-    'sm' : 480px,
+    'sm' : 501px,
     'nm' : 768px,
     'lg' : 1024px,
     'xl' : 1280px,
-    'xxl' : 1780px 
+    'xxl' : 1768px 
 );
 
 @mixin sm-screen{
@@ -36,8 +36,8 @@ $sizes : (
     }
 };
 
-@mixin custom-screen($breakpoint: 2000px){
-    @media (max-width : $breakpoint){
+@mixin custom-screen($b: 2000px){
+    @media (max-width : $b){
         @content;
     }
 };

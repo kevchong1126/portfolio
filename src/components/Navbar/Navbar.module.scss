@@ -1,0 +1,146 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
+
+.container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    z-index: 9999;
+    
+    @include custom-screen($b: 800px){
+        height: 60px;
+        width: 100%;
+    }
+
+    .full{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: $bg-main;
+        color: $txt-main;
+        display: flex;
+        justify-content: center;
+
+        p{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            font-size: $txt-l-1;
+            cursor: pointer;
+        }
+
+        .fullContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            @include cinzel;
+
+            
+            h2{
+                font-size: $txt-rsp-4;
+                font-weight: 300;
+                text-transform: uppercase;
+                cursor: pointer;
+                display: inline-block;
+            }
+        }
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-block: $spacing-nm-4;
+        background-color: $bg-main;
+        color: $txt-main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid rgba($color: #000000, $alpha: 0.4);
+        z-index: 2;
+
+        @include custom-screen($b: 800px){
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-inline: $spacing-sm-2;
+        }
+    }
+}
+
+.burgerContainer{
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+    width: 28px;
+    cursor: pointer;
+
+    div{
+        width: 100%;
+        background-color: $black;
+    }
+
+    .line1{
+        height: 3px;
+    }
+
+    .line2{
+        height: 2px;
+    }
+
+    .line3{
+        height: 1px;
+    }
+
+
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-nm-1;
+    height: 100%;
+    margin-top : $spacing-sm-2;
+    @include cinzel;
+
+    @include custom-screen($b: 800px){
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .col{
+        white-space: nowrap;
+        transform: rotate(-180deg);
+        writing-mode: vertical-lr;
+        font-size: $txt-sm-2;
+
+        @include custom-screen($b: 800px){
+            writing-mode: horizontal-tb;
+            text-orientation: sideways;
+            white-space: wrap;
+            transform: rotate(0deg);
+        }
+        
+        @include custom-screen($b: 600px){
+            font-size: $txt-sm-1;
+        }
+        
+        .name{
+            font-size: $txt-nm-2;
+            text-transform: none;
+
+            @include custom-screen($b: 600px){
+                font-size: $txt-nm-1;
+            }
+        }
+    }
+}

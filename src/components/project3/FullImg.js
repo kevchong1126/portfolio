@@ -10,9 +10,9 @@ const FullImg = () => {
 
   return (
     <div className={styles.wrapper}>
-        <div className={styles.imgContainer}>
+        <a href='https://kevchong1126.github.io/instapic/' target='_blank' className={styles.imgContainer}>
             <img src={img1} ref={p3FullImg}></img>
-        </div>
+        </a>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
 
 .container{
     @include container;
@@ -7,12 +8,21 @@
     display: flex;
     margin-right: -1px;
     
+    @include custom-screen($b: 800px){
+        display: block;
+        width: 100vw;
+    }
+
     .section{
         height: 100%;
         width: 100vw;
         position: relative;
         margin-right: -1px;
         background-color: $bg-sec;
+
+        @include custom-screen($b: 800px){
+            display: none;
+        }
 
         .parallax{
             position: absolute;
@@ -27,6 +37,7 @@
 
     .cards{
         display: flex;
+        align-items: center;
         gap: $spacing-l-7;
         width: fit-content;
         height: 100%;
@@ -36,15 +47,29 @@
         padding-left: $spacing-l-5;
         padding-right: 25vw;
 
+        @include custom-screen($b: 800px){
+            height: fit-content;
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            gap: $spacing-l-4;
+            padding-block: $spacing-l-4;
+        }
         .card{
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             width: 690px;
             height: 100%;
             font-size: $txt-rsp-4;
             opacity: 0;
             @include cinzel;
+
+            @include custom-screen($b: 800px){
+                opacity: 1;
+            }
 
             .top{
                 margin-bottom: $spacing-sm-4;
@@ -56,6 +81,15 @@
                 margin-bottom: $spacing-nm-1;
                 overflow: hidden;
                 
+                .disappear{
+                    display: none;
+
+                    @include custom-screen($b: 800px){
+                        display: block;
+                    }
+                }
+
+
                 img{
                     @include img;
                 }

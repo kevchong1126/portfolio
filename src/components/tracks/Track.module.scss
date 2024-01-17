@@ -1,8 +1,15 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
 
 .track{
     width: fit-content;
     height: 100vh;
     display: flex;
+
+    @include custom-screen($b: 800px){
+        width: 100%;
+        height: fit-content;
+        display: block
+    }
 }

@@ -64,13 +64,24 @@ const Hero = () => {
                         <p className={styles.heading}>Check out my</p>
                     </div>
                     <div className={styles.line}>
-                        <p>my profile from LinkedIn</p>
+                        <p>my profile from 
+                            <a href='https://www.linkedin.com/in/kevin-chong-ng-49478526a/' target='_blank'>
+                                LinkedIn
+                            </a>
+                        </p>
                     </div>
                     <div className={styles.line}>
-                        <p>And also all my source </p>
+                        <p>my source code:
+                            <a href='https://github.com/kevchong1126' target='_blank'>
+                                Github
+                            </a>,
+                            
+                        </p>
                     </div>
                     <div className={styles.line}>
-                        <p>code: Github</p>
+                        <p> 
+                        and email: kechg123x@gmail.com
+                        </p>
                     </div>
                 </div>
 

@@ -46,11 +46,11 @@ const Main = () => {
                         <span>3.</span>
                         Demo and Code:
                     </div>
-                    <a href='#' target='_blank' className={styles.btn}>
+                    <a href='https://kevchong1126.github.io/ecommerce/' target='_blank' className={styles.btn}>
                         <p>Live Demo </p>
                         <IoIosArrowRoundForward className={styles.icon}/>
                     </a>
-                    <a href='#' target='_blank' className={styles.btn}>
+                    <a href='https://github.com/kevchong1126/ecommerce' target='_blank' className={styles.btn}>
                         <p>Source code</p>
                         <IoIosArrowRoundForward className={styles.icon}/>
                     </a>

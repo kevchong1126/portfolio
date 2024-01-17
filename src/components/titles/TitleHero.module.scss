@@ -1,5 +1,6 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
 
 .wrapper{
 
@@ -8,12 +9,19 @@
         flex-direction: column;
         align-items: flex-start;
         
-
+        @include custom-screen($b: 800px){
+            align-items: center;
+        }
+        
         .line{
             position: relative;
             display: inline-block;
             line-height: 1.1;
             opacity: 0;
+            
+            @include custom-screen($b: 800px){
+                opacity: 1;
+            }
             
             h2{
                 @include cinzel;
@@ -22,26 +30,42 @@
             }
             
             .title1{
-                font-size: $txt-rsp-5;
+                font-size: $txt-rsp-4;
+                
+                @include xxl-screen{
+                    font-size: $txt-rsp-5;
+                }
             }
 
             .title2{
-                font-size: $txt-rsp-6;
+                font-size: $txt-rsp-5;
+
+                @include xxl-screen{
+                    font-size: $txt-rsp-6;
+                }
             }
 
             .title3{
-                font-size: $txt-rsp-6;
+                font-size: $txt-rsp-5;
+
+                @include xxl-screen{
+                    font-size: $txt-rsp-6;
+                }
             }
 
             p{
                 position: absolute;
                 bottom: 20%;
                 transform: translateY(-50%);
-                font-size: $txt-nm-1;
+                font-size: $txt-l-1;
                 text-transform: uppercase;
                 display: flex;
                 font-weight: bold;
                 white-space: nowrap;
+
+                @include xxl-screen{
+                    font-size: $txt-nm-1;
+                }
             }
 
             .decor1{

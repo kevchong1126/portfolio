@@ -1,6 +1,6 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
-
+@use '../../scss/breakpoints' as *;
 
 .container{
     @include container;
@@ -11,6 +11,10 @@
     @include contentPadding;
     padding-inline: $spacing-l-2;
     
+    @include custom-screen($b: 800px){
+        height: 100vh;
+    }
+
     .maskContainer{
         @include fullAbsolute;
         background-color: $black;
@@ -26,23 +30,30 @@
             transform: translateY(-50%);
         }
     }
+
     .content{
         @include content;
-        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: $spacing-l-1;
+
+        @include custom-screen($b: 800px){
+            justify-content: space-around;
+            align-items: center;
+        }
     }
 }
 
 .titleContainer{
-    
-    
     .title{
-        font-size: $txt-rsp-5;
+        font-size: $txt-rsp-4;
         @include cinzel;
         text-transform: uppercase;
+
+        @include xxl-screen{
+            font-size: $txt-rsp-5;
+        }
     }
 }
 
@@ -50,10 +61,25 @@
     display: flex;
     gap: $spacing-l-4;
 
+    @include xl-screen{
+        gap: $spacing-l-1;
+    }
+
+    @include custom-screen($b: 600px){
+        flex-direction: column;
+    }
+
     .col{
         max-width: 250px;
         gap: $spacing-sm-1;
 
+        @include xl-screen{
+            font-size: $txt-sm-3;
+        }
+
+        @include lg-screen{
+            font-size: $txt-sm-2;
+        }
         span{
             margin-right: $spacing-l-4; 
         }
@@ -62,6 +88,14 @@
             display: flex;
             align-items: center;
             margin-top: $spacing-sm-2;
+
+            @include xl-screen{
+                margin-top: 2px;
+            }
+
+            @include sm-screen{
+                font-size: $txt-sm-4;
+            }
 
             .icon{
                 font-size: $txt-nm-2;

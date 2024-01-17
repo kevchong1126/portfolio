@@ -1,5 +1,6 @@
 @use '../../scss/mixins' as *;
 @use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
 
 .wrapper{
     height: 100%;
@@ -7,4 +8,9 @@
     display: flex;
     background-color: $bg-sec;
 
+    @include custom-screen($b: 800px){
+        width: 100vw;
+        height: fit-content;
+        display: block;
+    }
 }

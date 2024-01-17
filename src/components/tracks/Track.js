@@ -12,7 +12,7 @@ import Project3 from '../project3/Project3'
 import { MoveRightScroll } from '../../lib/MoveRight'
 import { FadeUpScroll } from '../../lib/FadeUp';
 import Random from '../../lib/Random'
-import Universal, { UniversalFrom } from '../../lib/Universal'
+import Universal, { UniversalFrom, UniversalColor } from '../../lib/Universal'
 
 /*Gsap*/
 import { gsap, Power0 } from 'gsap'
@@ -29,12 +29,17 @@ const Track1 = () => {
             p2FullImg, p2MainCont, p2MainWord1, p2MainWord2, p2MainWord3, p2Titles, p2Mask, p2PinText, p2PinCont, 
             p2PinImgCont,
             p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2,
-            p3GalImg 
+            p3GalImg,
+            fullNav, navbar, burgers
          } = useContext(context);
 
     useEffect(() => {
-        console.log(p2PinImgCont.current.innerHeight, p2PinImgCont.current.offsetHeight)
+        
         const ctx = gsap.context(() => {
+            const mm = gsap.matchMedia();
+            
+            mm.add('(min-width: 801px)', () => {
+
                 const tl = gsap.to( track.current, {
                     x: `-${track.current.clientWidth - window.innerWidth}`,
                     ease: 'none',
@@ -46,14 +51,35 @@ const Track1 = () => {
                         pin: true
                     }
                 });
-                
+    
+                /*Navbar*/
+                UniversalColor(navbar.current, p1Ref.current, {backgroundColor: '#000', color: '#fff', borderColor: '#fff',
+                delay: 0.2, ease: Power0.easeIn}, 'left 95%', '', false, 'play none none reverse', tl);
+                UniversalColor(fullNav.current, p1Ref.current, {backgroundColor: '#000', color: '#fff',
+                delay: 0.2, ease: Power0.easeIn}, 'left 95%', '', false, 'play none none reverse', tl);
+                burgers.current.forEach(el => {
+                    UniversalColor(el, p1Ref.current, {backgroundColor: '#fff', delay: 0.2, ease: Power0.easeIn},
+                    'left 95%', '', false, 'play none none reverse', tl);
+                })
+    
+                UniversalColor(navbar.current, p3MainCont.current, {backgroundColor: '#CCCCCC', color: '#000', borderColor: 'gray',
+                delay: 0.2, ease: Power0.easeIn}, 'right 95%', '', false, 'play none none reverse', tl);
+                UniversalColor(fullNav.current, p3MainCont.current, {backgroundColor: '#CCCCCC', color: '#000',
+                delay: 0.2, ease: Power0.easeIn}, 'right 95%', '', false, 'play none none reverse', tl);
+                burgers.current.forEach(el => {
+                    UniversalColor(el, p3MainCont.current, {backgroundColor: '#000', delay: 0.2, ease: Power0.easeIn},
+                    'right 95%', '', false, 'play none none reverse', tl);
+                });
+    
+    
                 /*Hero*/
                 MoveRightScroll(heroContent, heroRef, 100, 'none', 'left left', 'right left', true, tl);
                 FadeUpScroll(p1Heading, {delay: 0.3, duration: 1.8 }, 
                             p1Ref, 'left 95%', '', false, 'play none none reverse', tl);
                 Universal(p1Mask.current, p1Ref.current, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
                 duration: 0.7, ease: Power0.easeIn}, 'left 95%', '', false, 'play none none reverse', tl);
-
+                    
+                
                 Universal(heroWord1.current, heroWord1.current, {opacity: 1, duration: 0.6, ease: Power0.easeIn},
                     '', '', false, 'play', tl);
                 UniversalFrom(heroWord1.current, heroWord1.current, {xPercent: 6, duration: 0.6, ease: Power0.easeIn},
@@ -70,26 +96,26 @@ const Track1 = () => {
                         stagger: {each: 0.2}, delay: 0.4},'', '', false, 'play', tl);
                 UniversalFrom(heroCols.current, heroCols.current, {yPercent: 5, duration: 0.6, ease: Power0.easeOut,
                         stagger: {each: 0.2}, delay: 0.4},    '', '', false, 'play', tl);
-
+                
                 /*P1*/
                 p1Cols.current.forEach( el => {
                     Universal(el, el, {opacity: 1, duration: 0.6, ease: Power0.easeIn},
-                             'right right', '', false, 'play', tl);
+                                'right right', '', false, 'play', tl);
                     UniversalFrom(el, el, {yPercent: 3, duration: 0.6, ease: Power0.easeIn},
                             'right right', '', false, 'play', tl);
                 });
                 Universal(p1Img.current, p1Img.current, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
                         duration: 1.3, ease: Power0.easeOut}, 'center right', '', false, 'play', tl);
                 UniversalFrom(p1Name.current, p1Name.current, {yPercent: 15, duration: .6, ease: Power0.easeOut},
-                             'right right', '', false, 'play', tl);
+                                'right right', '', false, 'play', tl);
                 Universal(p1Name.current, p1Name.current, {opacity: 1, duration: 0.6, ease: Power0.easeOut},
-                             'right right', '', false, 'play', tl);
+                                'right right', '', false, 'play', tl);
                 UniversalFrom(p1ParImg.current, p1ParContent.current, {xPercent: -15, ease: 'none'}, 
                                 'left right', 'left left', 1, 'play', tl);
                 
                 const iRec = p1ParImg.current.getBoundingClientRect();
                 const cRec = p1ShowImg.current.getBoundingClientRect();
-
+    
                 Universal(p1ParImg.current, p1ParContent.current, {ease: 'none', y: cRec.top - iRec.top, 
                     left: cRec.left - iRec.left - (iRec.width*0.15), width: cRec.width, height: cRec.height},
                             'left -10%', 'right 30%', 1, '', tl );
@@ -119,7 +145,7 @@ const Track1 = () => {
                 Universal(p2PinImgCont.current, p2PinCont.current, { y: `-${p2PinImgCont.current.offsetHeight*2}`, 
                             x: p2PinCont.current.offsetWidth*1.5, ease: 'none'}, 'left left',
                             `+=${p2PinCont.current.offsetWidth*1.5}`, true, '', tl);
-
+    
                 /*P3*/
                 Universal(p3FullImg.current, p3FullImg.current, {xPercent: 15, ease: 'none'}, 'left right', 'right left', 
                                 1, 'play', tl);
@@ -130,14 +156,17 @@ const Track1 = () => {
                 duration: 0.7, ease: Power0.easeIn}, 'right 95%', '', false, 'play none none reverse', tl);
                 FadeUpScroll(p3Titles, {delay: 0.3, duration: 1.8 }, 
                     p3MainCont, 'right 95%', '', false, 'play none none reverse', tl);
-
+    
                 UniversalFrom(p3GalWord1.current, p3GalWord1.current, { xPercent: 40, ease: 'none'},
                 'left right', 'left left', 1, '', tl);
                 UniversalFrom(p3GalWord2.current, p3GalWord2.current, { xPercent: 60, ease: 'none'},
                 'left right', 'left left', 1, '', tl);
                 p3GalImg.current.forEach( el => {
-                    UniversalFrom(el, el, { xPercent: -20, ease: 'none'}, 'left right', 'right left', 1, '', tl);
-                })
+                    UniversalFrom(el, el, { xPercent: -25, ease: 'none'}, 'left right', 'right left', 1, '', tl);
+                });
+            })
+            
+                
         });
 
 

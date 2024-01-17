@@ -1,10 +1,12 @@
-import React, { useState, useRef, createContext } from 'react'
-import { gsap } from 'gsap';
+import React, { useRef, createContext } from 'react'
 
 export const context = createContext();
 
 const Context = (props) => {
   const track = useRef();
+  const fullNav = useRef();
+  const navbar = useRef();
+  const burgers = useRef([]);
 
   const heroRef = useRef();
   const heroContent = useRef();
@@ -54,7 +56,8 @@ const Context = (props) => {
     p1Ref, p1Heading, p1Mask, p1Name, p1Cols, p1Img, p1ParContent, p1ParImg, p1ShowImg, p1ShowCol, p1ShowCols,
     p1ShowColImg1, p1ShowColImg2,
     p2FullImg, p2MainCont, p2MainWord1, p2MainWord2, p2MainWord3, p2Titles, p2Mask, p2PinText, p2PinCont, p2PinImgCont,
-    p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2, p3GalImg 
+    p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2, p3GalImg,
+    fullNav, navbar, burgers
   };
     
   return (

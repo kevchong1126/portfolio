@@ -9,9 +9,9 @@ const FullImg = () => {
     const { p2FullImg } = useContext(context);
   return (
     <div className={styles.wrapper}>
-        <div className={styles.imgContainer}>
+        <a href='https://kevchong1126.github.io/ecommerce' target='_blank' className={styles.imgContainer}>
             <img src={img1} ref={p2FullImg}></img>
-        </div>
+        </a>
     </div>
   )
 }
