@@ -71,7 +71,13 @@
 
         span{
             font-size: $txt-nm-4;
+            
+            @include custom-screen($b: 700px){
+                font-size: $txt-sm-3;
+            }
         }
+
+        
     }
 
     h2{
@@ -130,6 +136,10 @@
             margin-top: $spacing-sm-1;
             overflow: hidden;
 
+            @include sm-screen{
+                padding-inline: $spacing-sm-1;
+            }
+
             .number{
                 @include cinzel;
                 font-size: $txt-l-1;
@@ -163,7 +173,7 @@
             
             img{
                 @include img;
-                transform: scale(1.2);
+                transform: scale(1);
             }
         }
 
@@ -171,6 +181,10 @@
             display: flex;
             justify-content: space-between;
             margin-top: $spacing-sm-1;
+
+            @include sm-screen{
+                padding-inline: $spacing-sm-1;
+            }
 
             .number{
                 @include cinzel;
