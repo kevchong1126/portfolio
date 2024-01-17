@@ -4,7 +4,7 @@
 
 In this website, I showcase three of many of the projects that I have done. The website has horizontal scrolling, nice animations and beautiful design.
 
-## Technologogies:
+## Technologies:
 1. React
 2. Sass
 3. Gsap
