@@ -42,7 +42,7 @@ const Gallery = () => {
                 </div>
                 <div className={styles.cardL}>
                     <div className={styles.imgContainer}>
-                        <img src={img2} ref={el => p3GalImg.current.push(el)}/>
+                        <img src={img2} />
                     </div>
 
                     <div className={styles.textContainer}>
