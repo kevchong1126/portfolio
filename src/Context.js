@@ -7,6 +7,7 @@ const Context = (props) => {
   const fullNav = useRef();
   const navbar = useRef();
   const burgers = useRef([]);
+  const navLinks = useRef([]);
 
   const heroRef = useRef();
   const heroContent = useRef();
@@ -57,7 +58,7 @@ const Context = (props) => {
     p1ShowColImg1, p1ShowColImg2,
     p2FullImg, p2MainCont, p2MainWord1, p2MainWord2, p2MainWord3, p2Titles, p2Mask, p2PinText, p2PinCont, p2PinImgCont,
     p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2, p3GalImg,
-    fullNav, navbar, burgers
+    fullNav, navbar, burgers, navLinks
   };
     
   return (

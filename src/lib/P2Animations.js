@@ -1,7 +1,7 @@
 /*lib*/
 import { MoveRightScroll } from './MoveRight'
 import { FadeUpScroll } from './FadeUp';
-import Universal, { UniversalFrom } from './Universal'
+import Universal from './Universal'
 
 /*Gsap*/
 import { gsap, Power0 } from 'gsap'

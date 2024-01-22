@@ -38,17 +38,33 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            
+            gap: $spacing-nm-2;
             @include cinzel;
 
             
-            h2{
-                font-size: $txt-rsp-4;
-                font-weight: 300;
-                text-transform: uppercase;
-                cursor: pointer;
-                display: inline-block;
+            .line{
+                overflow: hidden;
+
+                h2{
+                    font-size: $txt-rsp-4;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    display: inline-block;
+                    transform: translateY(100%);
+                    opacity: 0;
+
+                    @include custom-screen($b: 800px){
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    @include sm-screen{
+                        font-size: $txt-l-2;
+                    }
+                }
             }
+            
         }
     }
     .content{
