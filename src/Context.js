@@ -52,13 +52,25 @@ const Context = (props) => {
   const p3GalWord2 = useRef();
   const p3GalImg = useRef([]);
 
+  const footerTitles = useRef([]);
+  const footerMask = useRef();
+  const footerMainCont = useRef();
+  const footerMainTitle = useRef();
+  const footerMainLinks = useRef();
+
+  const mentionsTitle = useRef();
+  const mentionsText = useRef([]);
+  const mentionsLine = useRef([]);
+
   const obj = {
     track, heroRef, heroCols, heroContent, heroWord1, heroWord2, heroWord3,
     p1Ref, p1Heading, p1Mask, p1Name, p1Cols, p1Img, p1ParContent, p1ParImg, p1ShowImg, p1ShowCol, p1ShowCols,
     p1ShowColImg1, p1ShowColImg2,
     p2FullImg, p2MainCont, p2MainWord1, p2MainWord2, p2MainWord3, p2Titles, p2Mask, p2PinText, p2PinCont, p2PinImgCont,
     p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2, p3GalImg,
-    fullNav, navbar, burgers, navLinks
+    fullNav, navbar, burgers, navLinks,
+    footerTitles, footerMask, footerMainCont, footerMainTitle, footerMainLinks,
+    mentionsTitle, mentionsText, mentionsLine
   };
     
   return (

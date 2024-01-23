@@ -15,6 +15,7 @@ import HeroAnimations from '../../lib/HeroAnimations'
 import P1Animations from '../../lib/P1Animations'
 import P2Animations from '../../lib/P2Animations'
 import P3Animations from '../../lib/P3Animations'
+import FooterAnimations from '../../lib/FooterAnimations'
 
 /*Gsap*/
 import { gsap, Power0 } from 'gsap'
@@ -32,7 +33,9 @@ const Track1 = () => {
             p2PinImgCont,
             p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1,  p3GalWord2,
             p3GalImg,
-            fullNav, navbar, burgers
+            fullNav, navbar, burgers,
+            footerMainCont, footerTitles, footerMask, footerMainTitle, footerMainLinks,
+            mentionsTitle, mentionsText, mentionsLine
          } = useContext(context);
 
     useEffect(() => {
@@ -54,7 +57,7 @@ const Track1 = () => {
                     }
                 });
                 
-                NavAnimations(tl, fullNav, navbar, burgers, p3MainCont, p1Ref)
+                NavAnimations(tl, fullNav, navbar, burgers, p3MainCont, p1Ref, footerMainCont)
     
     
                 HeroAnimations(tl, heroRef, heroContent, heroCols, heroWord1, heroWord2, heroWord3,
@@ -70,6 +73,8 @@ const Track1 = () => {
                 P3Animations(tl,  p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3MainWord3, p3Mask, p3Titles, p3GalWord1, 
                 p3GalWord2, p3GalImg);
 
+                FooterAnimations(tl, footerMainCont, footerTitles, footerMask,  footerMainTitle, footerMainLinks,
+                mentionsTitle, mentionsText, mentionsLine);
                 
             })       
         });

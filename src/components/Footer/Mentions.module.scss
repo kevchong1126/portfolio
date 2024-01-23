@@ -1,0 +1,115 @@
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
+
+.container{
+    width: 100vw;
+    height: fit-content;
+    @include contentPadding;
+    padding-inline: $spacing-l-2;
+    background-color: $red;
+    color: $black;
+
+    @include sm-screen{
+        padding-inline: $spacing-sm-4
+    }
+
+    .content{
+        @include content;
+        margin-top: $spacing-l-4;
+
+
+        .title{
+            @include cinzel;
+            opacity: 0;
+
+            @include custom-screen($b: 800px){
+                opacity: 1;
+            }
+
+            h2{
+                font-size: $txt-rsp-4;
+                font-weight: 300;
+
+                @include custom-screen($b: 800px){
+                    font-size: $txt-l-3;
+                }
+
+                @include nm-screen{
+                    text-align: center;
+                }
+
+                @include sm-screen{
+                    font-size: $txt-nm-4;
+                }
+            }
+
+            .padding{
+                margin-left: $spacing-l-4;
+
+                @include nm-screen{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.box{
+    width: 90%;
+    max-width: 800px;
+    margin-inline: auto;
+    margin-top: $spacing-l-6;
+
+    @include custom-screen($b: 800px){
+        margin-top: $spacing-l-4;
+    }
+
+    .header{
+        font-size: $txt-nm-1;
+        font-weight: 600;
+
+        @include nm-screen{
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+
+    .list{
+        margin-left: $spacing-l-5;
+        margin-top: $spacing-nm-4;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm-4;
+
+        @include nm-screen{
+            margin-left: 0;
+            margin-top: $spacing-l-2;
+        }
+
+        li{
+            font-size: $txt-nm-3;
+            font-weight: 600;
+
+            @include custom-screen($b: 800px){
+                font-size: $txt-nm-1;
+            }
+
+            @include sm-screen{
+                font-weight: 400;
+            }
+
+            .hide{
+                overflow: hidden;
+                margin-block: $spacing-sm-2;
+
+            }
+
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: $black;
+            }
+        }
+    }
+}

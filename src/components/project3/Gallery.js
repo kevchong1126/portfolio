@@ -7,11 +7,21 @@ import img1 from '../../images/show7.jpg'
 import img2 from '../../images/show8.jpg'
 import img3 from '../../images/show9.jpg'
 
+/*Components*/
+import TitleProject from '../titles/TitleProject'
+
 const Gallery = () => {
-    const { p3GalImg, p3GalWord1, p3GalWord2 } = useContext(context);
+    const { p3GalImg, p3GalWord1, p3GalWord2, footerTitles,
+            footerMask } = useContext(context);
 
   return (
     <div className={styles.container}>
+
+        <div className={styles.maskContainer} ref={footerMask}>
+            <div className={styles.right}>
+                <TitleProject ref={footerTitles} text1={'The'} text2={'End'} text3={':)'} color={'#390000'}/>
+            </div>
+        </div>
 
         <div className={styles.content}>
 
@@ -28,7 +38,7 @@ const Gallery = () => {
             <div className={styles.slider}>
                 <div className={styles.cardS}>
                     <div className={styles.imgContainer}>
-                        <img src={img1} ref={el => p3GalImg.current.push(el)} />
+                        <img src={img1} ref={el => p3GalImg.current.push(el)} alt='statue'/>
                     </div>
 
                     <div className={styles.textContainer}>
@@ -42,7 +52,7 @@ const Gallery = () => {
                 </div>
                 <div className={styles.cardL}>
                     <div className={styles.imgContainer}>
-                        <img src={img2} />
+                        <img src={img2} alt='statue'/>
                     </div>
 
                     <div className={styles.textContainer}>
@@ -56,7 +66,7 @@ const Gallery = () => {
                 </div>
                 <div className={styles.cardS}>
                     <div className={styles.imgContainer}>
-                        <img src={img3} ref={el => p3GalImg.current.push(el)}/>
+                        <img src={img3} ref={el => p3GalImg.current.push(el)} alt='statue'/>
                     </div>
 
                     <div className={styles.textContainer}>

@@ -3,13 +3,13 @@ import styles from './Footer.module.scss'
 import { context } from '../../Context'
 
 const Footer = () => {
-    const { FMainCont } = useContext(context);
+    const { footerMainCont, footerMainTitle, footerMainLinks } = useContext(context);
 
   return (
-    <div className={styles.container} ref={FMainCont}>
+    <div className={styles.container} ref={footerMainCont}>
         <div className={styles.content}>
-            <div className={styles.titleContainer}>
-                <div className={styles.titles}>
+            <div className={styles.titleContainer} ref={footerMainTitle}>
+                <div className={styles.titles} >
                     <h2>Hope</h2>
                     <h2>You</h2>
                     <h2>Enjoyed!</h2>
@@ -17,7 +17,7 @@ const Footer = () => {
                 
             </div>
 
-            <div className={styles.work}>
+            <div className={styles.work} ref={footerMainLinks}>
                 <a href='https://github.com/kevchong1126' target='_blank'> 
                     <h4>
                         Github

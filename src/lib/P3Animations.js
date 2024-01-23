@@ -13,9 +13,9 @@ const P3Animations = (tl, p3FullImg, p3MainCont, p3MainWord1, p3MainWord2, p3Mai
     
         Universal(p3FullImg.current, p3FullImg.current, {xPercent: 15, ease: 'none'}, 'left right', 'right left', 
         1, 'play', tl);
-        MoveRightScroll(p3MainWord1, p3MainCont, 10, 'none', 'left 10%', 'left -15%', true, tl);
-        MoveRightScroll(p3MainWord2, p3MainCont, 15, 'none', 'left 10%', 'left -15%', true, tl);
-        MoveRightScroll(p3MainWord3, p3MainCont, 25, 'none', 'left 10%', 'left -15%', true, tl);
+        MoveRightScroll(p3MainWord1, p3MainCont, 10, 'none', 'left 70%', 'left -15%', true, tl);
+        MoveRightScroll(p3MainWord2, p3MainCont, 15, 'none', 'left 70%', 'left -15%', true, tl);
+        MoveRightScroll(p3MainWord3, p3MainCont, 25, 'none', 'left 70%', 'left -15%', true, tl);
         Universal(p3Mask.current, p3MainCont.current, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         duration: 0.7, ease: Power0.easeIn}, 'right 95%', '', false, 'play none none reverse', tl);
         FadeUpScroll(p3Titles, {delay: 0.3, duration: 1.8 }, 

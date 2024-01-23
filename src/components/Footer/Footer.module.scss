@@ -5,9 +5,9 @@
 .container{
     height: 100%;
     width: 100vw;
-    background-color: $bg-main;
-    color: $black;
-    @include contentPadding;
+    background-color: $red;
+    color: $redDark;
+    padding-inline: $spacing-l-4;
 
     @include custom-screen($b: 800px){
         height: 100vh;
@@ -26,17 +26,31 @@
 
         .titleContainer{
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             @include cinzel;
+            opacity: 0;
+
+            @include custom-screen($b: 800px){
+                opacity: 1;
+                margin-top: $spacing-l-2;
+            }
+
+            @include nm-screen{
+                justify-content: center;
+            }
 
             h2{
                 font-size: $txt-rsp-4;
                 font-weight: 300;
                 text-transform: uppercase;
-                text-align: center;
+                text-align: right;
 
                 @include xxl-screen{
                     font-size: $txt-rsp-5;
+                }
+
+                @include nm-screen{
+                    text-align: center;
                 }
             }
         }
@@ -44,17 +58,24 @@
         .work{
             @include cinzel;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: $spacing-l-2;
+            align-items: flex-end;
+            gap: $spacing-nm-4;
+            opacity: 0;
 
-            @include sm-screen{
-                flex-direction: column;
+            @include custom-screen($b: 800px){
+                opacity: 1;
+            }
+
+            @include nm-screen{
                 align-items: center;
             }
 
             h4{
                 font-size: $txt-l-1;
                 text-transform: capitalize;
+                color: $redDark;
 
                 @include lg-screen{
                     font-size: $txt-nm-1;

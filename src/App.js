@@ -5,6 +5,7 @@ import './index.scss';
 import Context from "./Context";
 import Navbar from "./components/Navbar/Navbar";
 import Track from "./components/tracks/Track";
+import Mentions from "./components/Footer/Mentions";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <Context>
       <Navbar />
       <Track />
+      <Mentions />
     </Context>
   );
 }

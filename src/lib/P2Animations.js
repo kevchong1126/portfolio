@@ -13,9 +13,9 @@ const P2Animations = (tl, p2FullImg, p2MainCont, p2MainWord1, p2MainWord2, p2Mai
     
         Universal(p2FullImg.current, p2FullImg.current, {xPercent: 15, ease: 'none'}, 'left right', 'right left', 
         1, 'play', tl);
-        MoveRightScroll(p2MainWord1, p2MainCont, 10, 'none', 'left 10%', 'left -15%', true, tl);
-        MoveRightScroll(p2MainWord2, p2MainCont, 15, 'none', 'left 10%', 'left -15%', true, tl);
-        MoveRightScroll(p2MainWord3, p2MainCont, 25, 'none', 'left 10%', 'left -15%', true, tl);
+        MoveRightScroll(p2MainWord1, p2MainCont, 10, 'none', 'left 70%', 'left -15%', true, tl);
+        MoveRightScroll(p2MainWord2, p2MainCont, 15, 'none', 'left 70%', 'left -15%', true, tl);
+        MoveRightScroll(p2MainWord3, p2MainCont, 25, 'none', 'left 70%', 'left -15%', true, tl);
         Universal(p2Mask.current, p2MainCont.current, {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         duration: 0.7, ease: Power0.easeIn}, 'right 95%', '', false, 'play none none reverse', tl);
         FadeUpScroll(p2Titles, {delay: 0.3, duration: 1.8 }, 
