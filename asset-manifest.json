@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2f65403f.css",
-    "main.js": "/portfolio/static/js/main.7e26c5e0.js",
-    "static/media/p1.png": "/portfolio/static/media/p1.fe59654cddc502b5dd9d.png",
-    "static/media/p3.png": "/portfolio/static/media/p3.60caf8e1b50ca2449338.png",
-    "static/media/show8.jpg": "/portfolio/static/media/show8.1ca87b1285bbe03e8a61.jpg",
-    "static/media/show6.png": "/portfolio/static/media/show6.5a7d27294eff67ae9cae.png",
-    "static/media/show9.jpg": "/portfolio/static/media/show9.c16b3e11c49f6c045195.jpg",
-    "static/media/show7.jpg": "/portfolio/static/media/show7.5276c53254a182eb9645.jpg",
+    "main.js": "/portfolio/static/js/main.7b9ef310.js",
+    "static/media/show8.jpg": "/portfolio/static/media/show8.33b78538fde053995443.jpg",
+    "static/media/p1.png": "/portfolio/static/media/p1.5bed2b67041dbb567517.png",
+    "static/media/show9.jpg": "/portfolio/static/media/show9.d287d630410ea5034dd5.jpg",
+    "static/media/show7.jpg": "/portfolio/static/media/show7.9101b573d01911962ab9.jpg",
     "static/media/show2.webp": "/portfolio/static/media/show2.c3d1cacbba9356c5adee.webp",
+    "static/media/p3.png": "/portfolio/static/media/p3.e4246b5ca09240d31420.png",
     "static/media/show1.webp": "/portfolio/static/media/show1.e1234761c9467dcb9eaa.webp",
-    "static/media/show4.png": "/portfolio/static/media/show4.8d3e2942941f3e28766b.png",
-    "static/media/show5.png": "/portfolio/static/media/show5.2794c9ff604c17b2b453.png",
+    "static/media/show6.png": "/portfolio/static/media/show6.c1f47e4d2f5566778f13.png",
     "static/media/p2.webp": "/portfolio/static/media/p2.e3db529721cb8d9681a4.webp",
     "static/media/show3.png": "/portfolio/static/media/show3.22c3d85e3245fd84d398.png",
+    "static/media/show5.png": "/portfolio/static/media/show5.bdd80ebe0308b7dcee93.png",
+    "static/media/show4.png": "/portfolio/static/media/show4.d476534d194e5b171f99.png",
     "index.html": "/portfolio/index.html",
     "main.2f65403f.css.map": "/portfolio/static/css/main.2f65403f.css.map",
-    "main.7e26c5e0.js.map": "/portfolio/static/js/main.7e26c5e0.js.map"
+    "main.7b9ef310.js.map": "/portfolio/static/js/main.7b9ef310.js.map"
   },
   "entrypoints": [
     "static/css/main.2f65403f.css",
-    "static/js/main.7e26c5e0.js"
+    "static/js/main.7b9ef310.js"
   ]
 }
