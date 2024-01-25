@@ -54,6 +54,10 @@
         @include xxl-screen{
             font-size: $txt-rsp-5;
         }
+
+        @include sm-screen{
+            font-size: $txt-l-2;
+        }
     }
 }
 

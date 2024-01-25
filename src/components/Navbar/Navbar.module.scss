@@ -86,6 +86,10 @@
             align-items: center;
             padding-inline: $spacing-sm-2;
         }
+
+        @include sm-screen{
+            gap: $spacing-sm-2;
+        }
     }
 }
 
@@ -131,6 +135,11 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
+    }
+    
+    @include sm-screen{
+        justify-content: center;
+        gap: $spacing-sm-2;
     }
     
     .col{

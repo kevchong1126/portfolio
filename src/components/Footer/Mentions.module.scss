@@ -18,6 +18,13 @@
         @include content;
         margin-top: $spacing-l-4;
 
+        @include xxl-screen{
+            font-size: $txt-rsp-4;
+        }
+
+        @include sm-screen{
+            margin-top: 0;
+        }
 
         .title{
             @include cinzel;
@@ -40,7 +47,7 @@
                 }
 
                 @include sm-screen{
-                    font-size: $txt-nm-4;
+                    font-size: $txt-l-1;
                 }
             }
 
@@ -65,6 +72,10 @@
         margin-top: $spacing-l-4;
     }
 
+    @include sm-screen{
+        margin-top: $spacing-l-2;
+    }
+    
     .header{
         font-size: $txt-nm-1;
         font-weight: 600;

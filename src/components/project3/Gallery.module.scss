@@ -85,6 +85,14 @@
         font-size: $txt-rsp-4;
         font-weight: 300;
         text-transform: uppercase;
+
+        @include xxl-screen{
+            font-size: $txt-rsp-4;
+        }
+
+        @include sm-screen{
+            font-size: $txt-l-1;
+        }
     }
 }
 

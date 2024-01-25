@@ -27,7 +27,9 @@
             align-items: center;
         }
 
-        
+        @include sm-screen{
+            justify-content: center;
+        }
     }
 }
 
@@ -69,6 +71,10 @@
     @include custom-screen($b: 600px){
         flex-direction: column;
         gap: $spacing-sm-4;
+    }
+
+    @include sm-screen{
+        align-items: center;
     }
 
     .col{

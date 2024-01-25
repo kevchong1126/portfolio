@@ -52,6 +52,10 @@
                 @include nm-screen{
                     text-align: center;
                 }
+
+                @include sm-screen{
+                    font-size: $txt-l-2;
+                }
             }
         }
 
