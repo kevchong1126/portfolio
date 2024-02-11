@@ -24,13 +24,13 @@ const Mentions = () => {
                     </li>
                     <li>
                         <div className={styles.hide}>
-                            <p ref={el => mentionsText.current.push(el)}>+12 successful projects</p>
+                            <p ref={el => mentionsText.current.push(el)}>+20 successful projects</p>
                         </div>
                         <div className={styles.line} ref={el => mentionsLine.current.push(el)}></div>
                     </li>
                     <li>
                         <div className={styles.hide}>
-                            <p ref={el => mentionsText.current.push(el)}>+2 years of professional coding</p>
+                            <p ref={el => mentionsText.current.push(el)}>+4 years of professional coding</p>
                         </div>
                         <div className={styles.line} ref={el => mentionsLine.current.push(el)}></div>
                     </li>
